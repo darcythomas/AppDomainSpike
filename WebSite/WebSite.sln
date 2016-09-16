@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Tests", "WebSite.Tests\WebSite.Tests.csproj", "{5484B3A2-B0AE-4DCE-B029-BD5D1F0CC5D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolatedSecurityModule", "IsolatedSecurityModule\IsolatedSecurityModule.csproj", "{EE5430C2-A0A1-4FA0-94B9-B707483D822D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5484B3A2-B0AE-4DCE-B029-BD5D1F0CC5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5484B3A2-B0AE-4DCE-B029-BD5D1F0CC5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5484B3A2-B0AE-4DCE-B029-BD5D1F0CC5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE5430C2-A0A1-4FA0-94B9-B707483D822D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5430C2-A0A1-4FA0-94B9-B707483D822D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5430C2-A0A1-4FA0-94B9-B707483D822D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5430C2-A0A1-4FA0-94B9-B707483D822D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
