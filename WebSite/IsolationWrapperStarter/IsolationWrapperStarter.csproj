@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F8169349-C223-450C-AFEE-73057DB7C982}</ProjectGuid>
+    <ProjectGuid>{F8E9FAAF-6FC9-4EE2-A755-36551A662436}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IsolationWrapper</RootNamespace>
-    <AssemblyName>IsolationWrapper</AssemblyName>
+    <RootNamespace>IsolationWrapperStarter</RootNamespace>
+    <AssemblyName>IsolationWrapperStarter</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StartUp.cs" />
+    <Compile Include="IsolationProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IsolationWrapperStarter\IsolationWrapperStarter.csproj">
-      <Project>{f8e9faaf-6fc9-4ee2-a755-36551a662436}</Project>
-      <Name>IsolationWrapperStarter</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
