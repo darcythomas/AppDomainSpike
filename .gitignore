@@ -301,3 +301,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+WebSite/dlls/IsolationWrapper.dll
