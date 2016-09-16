@@ -10,7 +10,7 @@ namespace IsolatedSecurityModule
     {
         public bool HasAccess(String userName, String action)
         {
-            return true;
+            return true;//We pretend to call the DB here and check if the user has permission to perform an action
         }
     }
 }
