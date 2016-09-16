@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IsolationWrapperStarter;
+using IsolationHost;
 using NUnit.Framework;
 
 namespace WebSite.Tests
@@ -14,7 +14,6 @@ namespace WebSite.Tests
         [Test]
         public void StartupTest()
         {
-             IsolationWrapper.StartUp puller;
             using (IsolationProxy isolation = new IsolationProxy())
             {
 

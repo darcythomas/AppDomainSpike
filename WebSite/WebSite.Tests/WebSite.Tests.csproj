@@ -109,13 +109,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IsolationWrapperStarter\IsolationWrapperStarter.csproj">
+    <ProjectReference Include="..\IsolationHost\IsolationHost.csproj">
       <Project>{f8e9faaf-6fc9-4ee2-a755-36551a662436}</Project>
-      <Name>IsolationWrapperStarter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IsolationWrapper\IsolationWrapper.csproj">
-      <Project>{f8169349-c223-450c-afee-73057db7c982}</Project>
-      <Name>IsolationWrapper</Name>
+      <Name>IsolationHost</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebSite\WebSite.csproj">
       <Project>{0B191D90-6BA9-4991-A912-181EAC7200A8}</Project>
