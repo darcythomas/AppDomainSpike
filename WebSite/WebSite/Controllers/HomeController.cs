@@ -11,7 +11,6 @@ namespace WebSite.Controllers
     {
         public ActionResult Index()
         {
-            SecurityCaller.Start();
             return View();
         }
 

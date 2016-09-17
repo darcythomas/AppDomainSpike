@@ -5,30 +5,24 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Web;
+using Common.Interfaces;
 using IsolationHost;
 
 namespace WebSite.Security
 {
     public static class SecurityCaller
     {
-        private static Lazy<IsolationProxy> Proxy { get; } = new Lazy<IsolationProxy>(()=> new IsolationProxy());
+        private static Lazy<IsolationProxy> Proxy { get; } = new Lazy<IsolationProxy>(() => new IsolationProxy());
         private static IsolationProxy IsolationProxy => Proxy.Value;
 
-      
-        public static void Start()
+
+        public static IHasAccess GetSecurityModule()
         {
-            string file = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);// + "\\" + Parts[0].Trim() + ".dll";
-
-
-            Process.Start("explorer.exe", file);
-
-
-            IsolationProxy.Start();
-        
+            return new HasAccessProxy(IsolationProxy);
         }
         private static void Stop()
         {
-
+            IsolationProxy.Dispose();
         }
     }
 }

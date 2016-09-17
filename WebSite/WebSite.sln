@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationWrapper", "Isolati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityModule", "SecurityModule\SecurityModule.csproj", "{EE5430C2-A0A1-4FA0-94B9-B707483D822D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Interfaces", "Common.Interfaces\Common.Interfaces.csproj", "{08396E09-3C89-48CD-9748-8C69EF0A51F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{EE5430C2-A0A1-4FA0-94B9-B707483D822D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE5430C2-A0A1-4FA0-94B9-B707483D822D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE5430C2-A0A1-4FA0-94B9-B707483D822D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08396E09-3C89-48CD-9748-8C69EF0A51F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08396E09-3C89-48CD-9748-8C69EF0A51F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08396E09-3C89-48CD-9748-8C69EF0A51F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08396E09-3C89-48CD-9748-8C69EF0A51F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

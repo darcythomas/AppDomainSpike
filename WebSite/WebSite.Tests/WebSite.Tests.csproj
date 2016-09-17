@@ -109,6 +109,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common.Interfaces\Common.Interfaces.csproj">
+      <Project>{08396E09-3C89-48CD-9748-8C69EF0A51F4}</Project>
+      <Name>Common.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IsolationHost\IsolationHost.csproj">
       <Project>{f8e9faaf-6fc9-4ee2-a755-36551a662436}</Project>
       <Name>IsolationHost</Name>

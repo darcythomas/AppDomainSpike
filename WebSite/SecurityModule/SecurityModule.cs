@@ -1,12 +1,14 @@
 ﻿using System;
+using Common.Interfaces;
 
 namespace SecurityModule
 {
-    public class SecurityModule
+    public class SecurityAccessModule : IHasAccess
     {
-        public bool HasAccess(String userName, String action)
+        public bool IsAbleTo(IUserAction userAction)
         {
-            return true;//We pretend to call the DB here and check if the user has permission to perform an action
+            //We pretend to call the DB here and check if the user has permission to perform an action
+            return !userAction.Action.Equals("Launch Nukes", StringComparison.OrdinalIgnoreCase);
         }
     }
 }
