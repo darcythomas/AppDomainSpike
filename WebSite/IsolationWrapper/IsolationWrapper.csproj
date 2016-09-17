@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Interfaces">
+      <HintPath>..\dlls\Common.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,10 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common.Interfaces\Common.Interfaces.csproj">
-      <Project>{08396e09-3c89-48cd-9748-8c69ef0a51f4}</Project>
-      <Name>Common.Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SecurityModule\SecurityModule.csproj">
       <Project>{ee5430c2-a0a1-4fa0-94b9-b707483d822d}</Project>
       <Name>SecurityModule</Name>
