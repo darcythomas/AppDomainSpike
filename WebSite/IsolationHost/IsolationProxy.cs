@@ -15,18 +15,31 @@ namespace IsolationHost
         
         public IsolationProxy()
         {
-            _appDomain = AppDomain.CreateDomain("New Domain");
+            String name = "New Domain";
+            string dllFolder = @"C:\temp\isolation";
+            AppDomainSetup domainSetup = new AppDomainSetup();
+            domainSetup.ApplicationName = name;
+            
+            domainSetup.ApplicationBase = dllFolder;
 
-            string file = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);// + "\\" + Parts[0].Trim() + ".dll";
+            _appDomain = AppDomain.CreateDomain(name,null,domainSetup);
+
+          //  string file = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);// + "\\" + Parts[0].Trim() + ".dll";
 
 
-            Process.Start("explorer.exe", file);
+          //  Process.Start("explorer.exe", file);
+          
+          dynamic myObject =  _appDomain.CreateInstanceFromAndUnwrap(dllFolder + @"\IsolationWrapper.dll", "IsolationWrapper.StartUp");
 
 
-            //   _appDomain.ExecuteAssembly(@"c:\HelloWorld.exe");
 
+            //  var path = typeof(IsolationWrapper.StartUp).Assembly.Location;
+            //    _appDomain.ExecuteAssembly(path);
+            //   Type t = typeof(IsolationWrapper.StartUp);
+            //  IsolationWrapper.StartUp myObject = (IsolationWrapper.StartUp)_appDomain.CreateInstanceFromAndUnwrap(path, t.FullName);
 
-            //  appDomain.DoCallBack(new CrossAppDomainDelegate(SayHello));
+             var q = myObject.CallMe();
+            //  _appDomain.DoCallBack(new CrossAppDomainDelegate(SayHello));
 
         }
 

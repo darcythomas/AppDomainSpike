@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace IsolationWrapper
 {
+    [Serializable]
     public class StartUp
     {
+        public string CallMe()
+        {
+            return "You called me";
+        }
     }
 }

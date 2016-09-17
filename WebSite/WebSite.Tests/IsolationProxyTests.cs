@@ -16,7 +16,7 @@ namespace WebSite.Tests
         public void StartupTest()
         {
 
-            SecurityCaller.Start();
+        //    SecurityCaller.Start();
             using (IsolationProxy isolation = new IsolationProxy())
             {
 
