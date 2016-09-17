@@ -7,13 +7,13 @@
 
 
 ===Steps===
- - Create web site 
- - Create "Security" dll
- - Call app domain from website app
- - setup inter process comunication 
-   - MarshalByRefObject
-   - Namedpiped
-   - WCF namedpipe
-   - MemoryMap?
- - Make call async
- - Do some performance testing of calls 
+ - [x] Create web site 
+ - [x] Create "Security" dll
+ - [x] Call app domain from website app
+ - [ ] setup inter process comunication 
+   - [ ] MarshalByRefObject
+   - [ ] Namedpiped
+   - [ ] WCF namedpipe
+   - [ ] MemoryMap?
+ - [ ] Make IPC calls async
+ - [ ] Do some performance testing of calls 
