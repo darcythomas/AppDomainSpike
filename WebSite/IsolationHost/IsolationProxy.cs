@@ -36,5 +36,10 @@ namespace IsolationHost
             //Close Appdomain
             AppDomain.Unload(_appDomain);
         }
+
+        public void Start()
+        {
+          
+        }
     }
 }

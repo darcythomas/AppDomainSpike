@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IsolationHost;
 using NUnit.Framework;
+using WebSite.Security;
 
 namespace WebSite.Tests
 {
@@ -14,10 +15,12 @@ namespace WebSite.Tests
         [Test]
         public void StartupTest()
         {
+
+            SecurityCaller.Start();
             using (IsolationProxy isolation = new IsolationProxy())
             {
 
-                Console.WriteLine("here");
+              
 
 
             }
