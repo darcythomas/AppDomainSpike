@@ -24,13 +24,13 @@ namespace WebSite.Tests
 
                 var security = new HasAccessProxy(isolation);
 
-                security.IsAbleTo(new UserAction()
-                {
-                    UserName = "Dude",
-                    Action = "Launch Nukes"
-                }).Should().BeFalse();
+                security.IsAbleTo(new UserAction() { UserName = "Dude", Action = "Launch Nukes" })
+                        .Should()
+                        .BeFalse();
 
-                security.IsAbleTo(new UserAction() { UserName = "Lady", Action = "Be Awesome" }).Should().BeTrue();
+                security.IsAbleTo(new UserAction() { UserName = "Lady", Action = "Be Awesome" })
+                        .Should()
+                        .BeTrue();
 
             }
 
