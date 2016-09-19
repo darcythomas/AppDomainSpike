@@ -6,16 +6,25 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace IsolationHost
 {
     public class IsolationProxy: IDisposable
     {
+        private readonly HttpContext _httpContext;
         private readonly AppDomain _appDomain;
-        string _dllFolder = @"C:\temp\isolation\";
+
+       // string _dllFolder = @"C:\temp\isolation\";
+        string _dllFolder = "~/App_Data/dlls/";
 
         public AppDomain AppDomain => _appDomain;
-        public String DllFolder => _dllFolder;
+        public String DllFolder => _httpContext == null?_dllFolder:_httpContext.Server.MapPath(_dllFolder);
+
+        public IsolationProxy(HttpContext httpContext) : this()
+        {
+            _httpContext = httpContext;
+        }
 
         public IsolationProxy()
         {
@@ -27,7 +36,7 @@ namespace IsolationHost
             };
 
 
-            _appDomain = AppDomain.CreateDomain(name,null,domainSetup);
+            _appDomain = AppDomain.CreateDomain(name, null, domainSetup);
         }
 
 
