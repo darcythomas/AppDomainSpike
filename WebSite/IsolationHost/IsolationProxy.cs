@@ -16,10 +16,11 @@ namespace IsolationHost
         private readonly AppDomain _appDomain;
 
        // string _dllFolder = @"C:\temp\isolation\";
-        string _dllFolder = "~/App_Data/dlls/";
+        string _dllFolderWeb = "~/App_Data/dlls/";
+        private string _dllFolderUnitTest = "dlls/";
 
         public AppDomain AppDomain => _appDomain;
-        public String DllFolder => _httpContext == null?_dllFolder:_httpContext.Server.MapPath(_dllFolder);
+        public String DllFolder => _httpContext == null? Path.Combine( AppDomain.CurrentDomain.BaseDirectory, _dllFolderUnitTest) : _httpContext.Server.MapPath(_dllFolderWeb);
 
         public IsolationProxy(HttpContext httpContext) : this()
         {
@@ -32,7 +33,7 @@ namespace IsolationHost
             AppDomainSetup domainSetup = new AppDomainSetup
             {
                 ApplicationName = name,
-                ApplicationBase = _dllFolder
+                ApplicationBase = DllFolder
             };
 
 
