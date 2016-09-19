@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IsolationHost;
 using WebSite.Security;
 
 namespace WebSite.Controllers
@@ -11,6 +12,7 @@ namespace WebSite.Controllers
     {
         public ActionResult Index()
         {
+            SecurityCaller.GetSecurityModule().IsAbleTo(new UserAction() { Action = "stuff", UserName = "person"} );
             return View();
         }
 

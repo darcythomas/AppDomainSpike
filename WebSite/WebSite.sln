@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.Tests", "WebSite.Tests\WebSite.Tests.csproj", "{5484B3A2-B0AE-4DCE-B029-BD5D1F0CC5D0}"
 	ProjectSection(ProjectDependencies) = postProject
+		{F8169349-C223-450C-AFEE-73057DB7C982} = {F8169349-C223-450C-AFEE-73057DB7C982}
 		{EE5430C2-A0A1-4FA0-94B9-B707483D822D} = {EE5430C2-A0A1-4FA0-94B9-B707483D822D}
 	EndProjectSection
 EndProject
@@ -15,6 +16,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsolationWrapper", "IsolationWrapper\IsolationWrapper.csproj", "{F8169349-C223-450C-AFEE-73057DB7C982}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityModule", "SecurityModule\SecurityModule.csproj", "{EE5430C2-A0A1-4FA0-94B9-B707483D822D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{08396E09-3C89-48CD-9748-8C69EF0A51F4} = {08396E09-3C89-48CD-9748-8C69EF0A51F4}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Interfaces", "Common.Interfaces\Common.Interfaces.csproj", "{08396E09-3C89-48CD-9748-8C69EF0A51F4}"
 EndProject

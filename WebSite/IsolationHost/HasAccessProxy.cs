@@ -29,8 +29,9 @@ namespace IsolationHost
         {
             string dllFolder = _isolationProxy.DllFolder;
 
-
-             dynamic myObject = _isolationProxy.AppDomain.CreateInstanceFromAndUnwrap($"{dllFolder}IsolationWrapper.dll", "IsolationWrapper.StartUp");
+            string dllPath = $"{dllFolder}IsolationWrapper.dll";
+            string typeName = "IsolationWrapper.StartUp";
+             dynamic myObject = _isolationProxy.AppDomain.CreateInstanceFromAndUnwrap(dllPath, typeName);
             // string call = myObject.CallMe();
 
             // return call == String.Empty;
