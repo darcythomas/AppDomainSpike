@@ -12,7 +12,7 @@ namespace WebSite.Security
 {
     public static class SecurityCaller
     {
-        private static Lazy<IsolationProxy> Proxy { get; } = new Lazy<IsolationProxy>(() => new IsolationProxy());
+        private static Lazy<IsolationProxy> Proxy { get; } = new Lazy<IsolationProxy>(() => new IsolationProxy(HttpContext.Current));
         private static IsolationProxy IsolationProxy => Proxy.Value;
 
 
